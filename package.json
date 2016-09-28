@@ -8,8 +8,6 @@
     "start": "node server.js",
     "dist": "npm run copy & webpack --progress --colors",
     "copy": "copyfiles -f ./index.html ./dist",
-    "heroku-prebuild": "npm install webpack-dev-server -g & npm install copyfiles -g",
-    "heroku-postbuild": "npm run dist",
     "postinstall": "npm run copy & webpack --config ./webpack.prod.config.js --progress --colors"
   },
   "author": "Vitor Cesco",
