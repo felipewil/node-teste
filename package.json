@@ -10,7 +10,7 @@
     "copy": "copyfiles -f ./index.html ./dist",
     "heroku-prebuild": "npm install webpack-dev-server -g & npm install copyfiles -g",
     "heroku-postbuild": "npm run dist",
-    "build": "webpack --config ./webpack.prod.config.js --progress --colors",
+    "postinstall": "npm run copy & webpack --config ./webpack.prod.config.js --progress --colors"
   },
   "author": "Vitor Cesco",
   "license": "ISC",
@@ -36,6 +36,10 @@
     "react-router": "^2.8.1",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.16.1"},
-  "devDependencies": {}
+    "webpack-dev-server": "^1.16.1"
+  },
+  "devDependencies": {
+    "webpack-dev-middleware": "^1.8.3",
+    "webpack-hot-middleware": "^2.12.2"
+  }
 }
