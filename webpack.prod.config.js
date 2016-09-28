@@ -1,7 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var srcPath = path.join(__dirname, '/src');
-var publicPath = '/assets/';
+var publicPath = '/dist/assets/';
 
 module.exports = {
     port: 8000,
